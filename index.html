@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Universe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: white;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding-top: 20px;
+        }
+        h1 {
+            background-color: #d32f2f;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .image-container img {
+            width: 50%;
+            border-radius: 10px;
+        }
+        .menu {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .menu a {
+            width: 120px;
+            height: 120px;
+            background-color: #222;
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .menu a img {
+            width: 80%;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+        .menu a:hover {
+            background-color: #d32f2f;
+        }
+        .content {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MARVEL UNIVERSE</h1>
+        <div class="image-container">
+            <img src="./Imagenes/avengers.jpg" alt="Marvel Poster">
+        </div>
+        <div class="content">
+            <p>Aquí encontrarás toda la historia, películas y series del UCM, además puedes dejar tu opinión en nuestro sitio web.</p>
+        </div>
+        <div class="menu">
+            <a href="historia.html"><img src="./Imagenes/marvel.jpg" alt="Historia">HISTORIA</a>
+            <a href="peliculas.html"><img src="./Imagenes/i.jpg" alt="Películas">PELÍCULAS</a>
+            <a href="series.html"><img src="./Imagenes/disney.jpg" alt="Series">SERIES</a>
+            <a href="opiniones.html"><img src="./Imagenes/logos.jpg" alt="Opiniones">OPINIONES</a>
+        </div>
+    </div>
+</body>
+</html>
