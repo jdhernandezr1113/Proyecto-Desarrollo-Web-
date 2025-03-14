@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opiniones - Marvel Universe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: white;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding-top: 20px;
+        }
+        h1 {
+            background-color: #d32f2f;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        input, textarea, button {
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #d32f2f;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .opiniones {
+            margin-top: 20px;
+            text-align: left;
+        }
+        .opinion {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Opiniones sobre el Universo Marvel</h1>
+        <div class="form-container">
+            <input type="text" id="nombre" placeholder="Tu nombre">
+            <textarea id="opinion" placeholder="Escribe tu opinión"></textarea>
+            <button onclick="agregarOpinion()">Enviar Opinión</button>
+        </div>
+        <div class="opiniones" id="listaOpiniones">
+            <h2>Opiniones de los fans:</h2>
+        </div>
+        <a href="index.html" class="back-button" style="display: block; margin-top: 20px; color: white; text-decoration: none;">Volver</a>
+    </div>
+    <script>
+        function agregarOpinion() {
+            let nombre = document.getElementById("nombre").value;
+            let opinion = document.getElementById("opinion").value;
+            
+            if (nombre.trim() === "" || opinion.trim() === "") {
+                alert("Por favor, completa ambos campos.");
+                return;
+            }
+            
+            let nuevaOpinion = document.createElement("div");
+            nuevaOpinion.classList.add("opinion");
+            nuevaOpinion.innerHTML = `<strong>${nombre}:</strong> <p>${opinion}</p>`;
+            
+            document.getElementById("listaOpiniones").appendChild(nuevaOpinion);
+            
+            document.getElementById("nombre").value = "";
+            document.getElementById("opinion").value = "";
+        }
+    </script>
+</body>
+</html>
