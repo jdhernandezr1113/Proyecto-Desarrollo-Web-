@@ -8,18 +8,31 @@
 </head>
 <body>
     <div class="container">
-        <h1>Opiniones de los Fans</h1>
-        <div class="content">
-            <p>Deja tu opinión sobre el Universo Cinematográfico de Marvel.</p>
-            <form id="opinionForm">
-                <textarea id="opinion" placeholder="Escribe tu opinión aquí..." required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-            <div id="opiniones-lista"></div>
+        <h1>Opiniones sobre el Universo Marvel</h1>
+        <div class="form-container">
+            <input type="text" id="nombre" placeholder="Tu nombre">
+            <textarea id="opinion" placeholder="Escribe tu opinión"></textarea>
+            <button onclick="agregarOpinion()">Enviar Opinión</button>
         </div>
-        <img src="./Imagenes/marvel.jpg" alt="Marvel Studios" width="400">
-        <a href="./index.html" class="back-button">Volver</a>
+        <div class="opiniones" id="listaOpiniones">
+            <h2>Opiniones de los fans:</h2>
+        </div>
+        <a href="index.html" class="back-button" style="display: block; margin-top: 20px; color: white; text-decoration: none;">Volver</a>
     </div>
+    
     <script src="./js/opiniones.js"></script>
 </body>
+<header>
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="historia.html">Historia</a></li>
+            <li><a href="peliculas.html">Películas</a></li>
+            <li><a href="series.html">Series</a></li>
+            <li><a href="opiniones.html">Opiniones</a></li>
+        </ul>
+    </nav>
+</header>
+
 </html>
+
