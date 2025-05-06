@@ -3,37 +3,71 @@ body {
     text-align: center;
     background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
     color: white;
+    margin: 0;
+    padding: 0;
 }
+
 .container {
     width: 80%;
+    max-width: 1000px;
     margin: auto;
-    padding-top: 20px;
+    padding: 80px 20px 40px;
 }
+
 h1 {
     background-color: #d32f2f;
     color: white;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    font-size: 2rem;
 }
+
+.image-container {
+    margin: 25px 0;
+}
+
 .image-container img {
     width: 50%;
-    border-radius: 10px;
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
+
 .content {
-    margin-top: 20px;
-    font-size: 18px;
-    text-align: left;
+    margin: 40px 0;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    text-align: justify;
 }
-.back-button {
+
+.content img {
     display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
+    margin: 25px auto;
+    max-width: 250px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.back-button {
+    display: inline-block;
+    margin: 30px auto;
+    padding: 12px 25px;
     background-color: #d32f2f;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 6px;
     font-weight: bold;
+    font-size: 1rem;
+    transition: transform 0.3s, background-color 0.3s;
 }
+
+.back-button:hover {
+    background-color: #b71c1c;
+    transform: scale(1.05);
+}
+
 /* Estilos del menú */
 .menu {
     position: fixed;
@@ -41,8 +75,8 @@ h1 {
     left: 0;
     width: 100%;
     background-color: #d32f2f;
-    padding: 10px 0;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 12px 0;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
     text-align: center;
     z-index: 1000;
 }
@@ -53,23 +87,48 @@ h1 {
     margin: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .menu ul li {
-    margin: 0 15px;
+    margin: 5px 15px;
 }
 
 .menu ul li a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1.1rem;
     font-weight: bold;
-    padding: 8px 12px;
-    transition: background 0.3s;
+    padding: 8px 15px;
+    transition: all 0.3s;
+    border-radius: 5px;
 }
 
 .menu ul li a:hover {
     background: rgba(255, 255, 255, 0.3);
-    border-radius: 5px;
 }
 
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 70px 15px 30px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+        padding: 12px;
+    }
+    
+    .image-container img {
+        width: 80%;
+    }
+    
+    .content {
+        font-size: 1rem;
+    }
+    
+    .menu ul li a {
+        font-size: 1rem;
+        padding: 6px 10px;
+    }
+}
